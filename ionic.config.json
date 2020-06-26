@@ -1,0 +1,7 @@
+{
+  "name": "igrica",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

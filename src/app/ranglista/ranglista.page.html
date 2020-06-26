@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        
+        <ion-button fill="undefined" [routerLink]="['/tabs']" routerDirection="backward" >
+            <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+          </ion-button>
+            <ion-title text-left>Ranglista igraca</ion-title>
+        
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let igr of ranglista; let i=index">
+      <!--
+      <ion-label [ngClass]="igr.username == igrac.username ? 'tekuci': ''">
+        {{i+1}}.   {{igr.firstname}} {{igr.lastname}} -  {{igr.totalPts}} pts
+      </ion-label>
+      -->
+
+      <ion-card [ngClass]="igr.username == igrac.username ? 'tekuci': 'obicni'">
+        <ion-card-header>
+          <ion-card-subtitle>
+            {{igr.firstname}} {{igr.lastname}}
+
+          </ion-card-subtitle>
+          <ion-card-title >
+            {{igr.totalPts}} poena
+          </ion-card-title>
+          
+        </ion-card-header>
+        
+        <ion-card-content>
+          Broj kreiranih pitanja: {{igr.totalQuestionsCreated}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

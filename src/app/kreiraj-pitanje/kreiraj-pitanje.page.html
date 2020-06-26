@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kviz znanja</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+    
+      
+        <ion-card>
+          <ion-grid>
+          <ion-row>
+          <ion-col>
+          <ion-card-content>
+              <ion-card-header>
+                <ion-card-title text-center>
+                  Kreiraj novo pitanje
+                </ion-card-title>
+              </ion-card-header>
+              <ion-item>
+                <ion-label position="floating">Kategorija</ion-label>
+                <ion-select placeholder="Izaberi kategoriju" (click)="promenaDropdown()" [(ngModel)]="category">
+                  <ion-select-option *ngFor="let cat of listaKategorija" value="{{cat.id}}">{{cat.name}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Pitanje</ion-label>
+                <ion-input [(ngModel)]="pitanje" name="pitanje"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Hint</ion-label>
+                <ion-input [(ngModel)]="hint" name="hint"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Tacan odgovor</ion-label>
+                <ion-input [(ngModel)]="tacanOdgovor" name="tacanOdgovor"></ion-input>
+              </ion-item>
+          </ion-card-content>
+        
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col size="5">
+        <ion-button fill="outline" color="danger" (click)="odustani()">
+          <ion-icon name="close-circle-outline" slot="start"></ion-icon>
+          Odustani
+        </ion-button>
+
+      </ion-col >
+
+      <ion-col size="5" offset="1">
+        <ion-button fill="outline" color="info" (click)="kreirajPitanje()">
+          <ion-icon name="add" slot="start"></ion-icon>
+          Kreiraj
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-card>
+    
+  
+
+</ion-content>

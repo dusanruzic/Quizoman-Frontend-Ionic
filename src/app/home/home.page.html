@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>
+      Kviz znanja
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+
+              <ion-card-header>
+                <ion-card-title text-center>
+                  Log in
+                </ion-card-title>
+              </ion-card-header>
+              <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input [(ngModel)]="username" name="username"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input [(ngModel)]="email" name="email"></ion-input>
+              </ion-item>
+              <ion-button expand="block" (click)="logInValidation()">Log in</ion-button>
+              <p text-center>
+                Don't have an account yet?
+                <button [routerLink]="'/signup'">Sign up</button>
+              </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

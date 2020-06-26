@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-row>
+          <ion-button fill="undefined" [routerLink]="['/tabs']" routerDirection="backward" >
+            <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+          </ion-button>
+        
+    <ion-title style="margin:auto">Profil igraca</ion-title>
+     <ion-button fill="undefined" (click)="logOut()">
+            <ion-icon name="exit"></ion-icon>
+          </ion-button>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row text-center>
+      <ion-col >
+        <ion-item text-center>
+        <ion-img slot="start" src="../../assets/Images/{{igrac.badge.name}}.jpg" class="slika" >
+          
+       </ion-img>
+           
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row text-center>
+      <ion-col text-center>
+        <ion-label>Dostignuce korisnika: {{igrac.badge.name}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Username:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{igrac.username}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Ime:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{igrac.firstname}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Prezime:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{igrac.lastname}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Broj poena:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{igrac.totalPts}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Broj kreiranih pitanja:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{igrac.totalQuestionsCreated}}</ion-label>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+  <ion-button id="deleteAccBtn" expand="full" color="medium" (click)="deleteAccount()">
+        Delete my account
+      </ion-button>
+</ion-content>

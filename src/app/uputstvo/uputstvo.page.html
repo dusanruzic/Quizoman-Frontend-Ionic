@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kviz znanja</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>O igrici</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Aplikacija je zasnovana na kvizu sa pitanjima iz različitih kategorija. U ovoj aplikaciji igrač se registruje kako bi se pratio njegov rezultat i rangirao sa ostalim igračima. Korisnik može birati kategorije iz kojih dobija deset pitanja i 60 sekundi da ih reši. Za svako pitanje korisnik unosi smatrani tačan odgovor i klikom na dugme potvrđuje svoj odgovor.
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Uputstvo</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Opcije koje korisniku stoje na raspolaganju jesu preskakanje dobijenog pitanja, čime smanjuje preostalo vreme za 3 sekunde, ili korisnik ima mogućnost da zatraži pomoć koja je dostupna za svako pitanje ali smanjuje korisniku vreme za 5 sekundi. Nakon što započne igru, korisnik se ne može vratiti nazad dok igru ne završi. Nakon odigrane partije, rezultat igrača se čuva u Djangovu bazu preko REST zahteva. Korisnik mođe videti ranglistu, koja mu izlistava rezultate svih igrača, a njegove naglašava
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
